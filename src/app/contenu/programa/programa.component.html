@@ -1,0 +1,20 @@
+<h1 class="text-center shadow-sm">Ino maresaky ?</h1>
+<div *ngFor="let element of vaovao_titre"
+  class="row featurette shadow-sm m-3 p-2 border-start border-5 border-primary border-gradient"
+>
+  <div class="col-md-9">
+    <h2 class="border-bottom border-3 border-dark">
+      {{element.titre}}
+    </h2>
+    <p>
+      {{element.description}}
+    </p>
+
+    <a class="btn btn-outline-primary" href="Vaovao?titre_vaovao={{element.titre_vaovao}}">Hamaky</a>
+  </div>
+  <div class="col-md-3">
+    <img class="img-fluid" src="../../../assets/{{element.image}}" alt="" />
+  </div>
+</div>
+
+
