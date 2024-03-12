@@ -4,6 +4,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from "./footer/footer.component";
+import { environment } from './../environments/environment';
 
 @Component({
     selector: 'app-root',
