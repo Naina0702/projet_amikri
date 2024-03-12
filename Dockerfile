@@ -1,21 +1,23 @@
-# Stage 1: Build the Angular application
-FROM node:18-alpine AS builder
+# Étape 1 : Utiliser une image de base avec Node.js pour construire l'application
+FROM node:latest as build
 
+# Définir le répertoire de travail dans le conteneur
 WORKDIR /app
 
-COPY package*.json ./
+# Copier les fichiers du projet dans le conteneur
+COPY . .
+
+# Installer les dépendances
 RUN npm install
 
-COPY . .
-RUN npm install -g @angular/cli
+# Étape 2 : Utiliser une image Nginx pour servir l'application Angular construite
+FROM nginx:latest
 
-RUN ng build
+# Copier les fichiers construits de l'étape précédente dans le répertoire de travail de Nginx
+COPY --from=build /app/dist/frontend /usr/share/nginx/html/
 
-# Stage 2: Slim image for serving the application
-FROM nginx:alpine
+# Exposer le port 80 pour accéder à l'application Angular
+EXPOSE 8081
 
-COPY --from=builder /app/dist/frontend /usr/share/nginx/html
-
-EXPOSE 4200
-
+# Laisser tourner Nginx en arrière-plan lors de l'exécution du conteneur
 CMD ["nginx", "-g", "daemon off;"]
