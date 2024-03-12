@@ -1,58 +1,68 @@
+
+<h1 class="text-center shadow-sm">Ireo mandrafitra ny Birao ato amin'ny Antsan'ny MIno an'i KRIsty</h1>
+
 <div class="carousel">
 
     <ngb-carousel
     #carousel
-    [interval]="4000"
+    [interval]="5000"
     [pauseOnHover]="pauseOnHover"
     [pauseOnFocus]="pauseOnFocus"
     (slide)="onSlide($event)"
     >
-    @for (img of images; track img; let i = $index) {
+   @for (img of images_contenu; track img; let i = $index) {
         <ng-template ngbSlide>
             <div class="carousel-caption">
                 <div class="text_b shadow-sm  rounded-start">
                 </div>
-    
             </div>
-
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-sm-6 col-md-4 mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../../../assets/Logo.jpg" alt="Card image cap">
+                    <div class="col-sm-6 col-md-4 mb-3" *ngFor="let elm of images_contenu">
+                        <div class="card shadow-sm">
+                            <img class="card-img-top" src="../../../assets/{{elm.IMG}}" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../../../assets/Logo.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 mb-3">
-                        <div class="card">
-                            <img class="card-img-top" src="../../../assets/Logo.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class=" text-center fs-5 card-text">
+                                    <b>{{elm.Nom}}</b>
+                                    <br> <br>
+                                    {{elm.Poste}}
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-                   
-            <!--
-
-            <a href="https://www.google.fr/?q=Number+{{ i + 1 }}" target="_blank" rel="nofollow noopener noreferrer">
-                <div class="picsum-img-wrapper" >
-                    <img class="img-fluid" [src]="img" alt=" My image {{ i + 1 }} description"/>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="carousel-caption">
+                <div class="text_b shadow-sm  rounded-start">
                 </div>
-            </a>
-
-            -->
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-6 col-md-4 mb-3" *ngFor="let elm of images_contenu_">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../assets/{{elm.IMG}}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class=" text-center fs-5 card-text">
+                                    <b>{{elm.Nom}}</b>
+                                    <br> <br>
+                                    {{elm.Poste}}
+                                </p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </ng-template>
     }
     </ngb-carousel>
+</div>
+
+<div class=" card my-3 shadow-lg">
+    <div class="card-img-top ">
+        <img class="img-fluid" src="../../../assets/komity/KOMITY.JPG" alt="">
+    </div>
+    <div class="card-body">
+        <p class="text-center">Ireo komity mandrindra ny raharaha ato amin'ny Antsan'ny MIno an'I KRIsty FLM SOANATAO - Ihosy</p>
+    </div>
+</div>

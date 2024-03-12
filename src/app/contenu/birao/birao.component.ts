@@ -12,7 +12,48 @@ import { FormsModule } from '@angular/forms';
 export class BiraoComponent {
   //carousel:any;
 
-  images =["2.jpg","4.jpg","5.jpg"].map((n)=>`assets/Projet_/${n}`)
+  //images =["President.JPG","IMG_1259 (copie).JPG","5.jpg"].map((n)=>`assets/Projet_/${n}`)
+
+	images_contenu =[
+		{
+			"Nom":"ZAINJAFY Arisona",
+			"Poste":"Président",
+			"IMG":"bureau/President.JPG"
+		},
+		{
+			"Nom":"HELINIRINA Soamanarivo",
+			"Poste":"Vice-Présidente",
+			"IMG":"bureau/VP.JPG"
+		},
+		{
+			"Nom":"MEME Florentine",
+			"Poste":"Trésorière",
+			"IMG":"bureau/IMG_E3130.JPG"
+		},/*
+		{
+			"Nom":"RAZAFINANDRASANA Emilienne Francine",
+			"Poste":"Sécretaire",
+			"IMG":"bureau/SEC.jpg"
+		},*/
+	]
+
+	images_contenu_=[
+		{
+			"Nom":"RAZAFINANDRASANA Emilienne Francine",
+			"Poste":"Sécretaire",
+			"IMG":"bureau/SEC.jpg"
+		},
+		{
+			"Nom":"RANDRIANIRINA Etienne Joël",
+			"Poste":"Chef de choeur - Auteur Compositeur",
+			"IMG":"bureau/Untitled - 2.png"
+		},
+		{
+			"Nom":"Heriniaina",
+			"Poste":"Chef de choeur",
+			"IMG":"bureau/Heriniaina.JPG"
+		},
+	]
 
 	paused = false;
 	unpauseOnArrow = false;
