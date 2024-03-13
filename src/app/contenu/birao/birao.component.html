@@ -20,7 +20,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-6 col-md-4 mb-3" *ngFor="let elm of images_contenu">
                         <div class="card shadow-sm">
-                            <img class="card-img-top" loading="lazy" src="../../../assets/{{elm.IMG}}" alt="Card image cap">
+                            <img class="card-img-top" src="../../../assets/{{elm.IMG}}" alt="Card image cap">
                             <div class="card-body">
                                 <p class=" text-center fs-5 card-text">
                                     <b>{{elm.Nom}}</b>
@@ -42,7 +42,7 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-6 col-md-4 mb-3" *ngFor="let elm of images_contenu_">
                         <div class="card">
-                            <img class="card-img-top" src="../../../assets/{{elm.IMG}}" alt="Card image cap" loading="lazy">
+                            <img class="card-img-top" src="../../../assets/{{elm.IMG}}" alt="Card image cap" >
                             <div class="card-body">
                                 <p class=" text-center fs-5 card-text">
                                     <b>{{elm.Nom}}</b>
