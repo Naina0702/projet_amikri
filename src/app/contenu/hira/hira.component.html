@@ -14,7 +14,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.69789922805
  background: rgb(247,85,85);
 background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.7637255585828081) 53%, rgba(255,255,255,1) 100%);   ">
     <div class="col-md-3 p-3">
-        <img  src="../../../assets/photo_album/IMG_E5024.JPG" class="img-fluid shadow vh-50">
+        <img  src="../../../assets/photo_album/IMG_E5024.JPG" class="img-fluid shadow vh-50" loading="lazy">
 
     </div>
     <div class="col-md-9 m-auto">
@@ -25,7 +25,7 @@ background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.76372555
 <div class="container mt-3 shadow-sm">
     <div class="list-group">
         <a href="{{elemnt.Lien_youtube}}" *ngFor="let elemnt of album_video" class="list-group-item list-group-item-action d-flex gap-3 py-3 " aria-current="true">
-          <img src="../../../assets/{{elemnt.image}}" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+          <img src="../../../assets/{{elemnt.image}}" loading="lazy" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
           <div class="d-flex gap-2 w-100 justify-content-between">
             <div>
               <h5 class="mb-0">Antsan'ny MIno an'I KRIsty</h5>
