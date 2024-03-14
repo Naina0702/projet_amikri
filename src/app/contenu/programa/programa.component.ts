@@ -11,13 +11,13 @@ import { NgFor } from '@angular/common';
 
 
 export class ProgramaComponent implements OnInit{
-  _new:any
-  _old:any
+  _content_1:any
+  _content_2:any
 
   vaovao_titre=[{
     'flag':'new',
     'titre':'AMIKRI mankalaza ny faha-15 taona nijoroany.',
-    'description':'Hotanterahina ny Alahady 24 Martsa 2024 ny fanokafana ny fakalazana.',
+    'description':'Hotanterahina ny Alahady 24 Martsa 2024 ho avy izao ny fanokafana ny fakalazana.',
     'image':'Farafangana.jpg',
     'titre_vaovao':'fankalazana'
   },
