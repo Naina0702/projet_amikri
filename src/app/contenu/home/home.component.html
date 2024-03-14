@@ -1,28 +1,29 @@
 <div class="carousel">
-<ngb-carousel
-#carousel
-[interval]="3000"
-[pauseOnHover]="pauseOnHover"
-[pauseOnFocus]="pauseOnFocus"
-(slide)="onSlide($event)"
+  <ngb-carousel
+  #carousel
+  [interval]="3000"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  (slide)="onSlide($event)"
 >
-@for (img of images; track img; let i = $index) {
+  @for (img of images; track img; let i = $index) {
     <ng-template ngbSlide style="height: 600px;">
-        <div class="carousel-caption">
-            <div class="text_b shadow-sm rounded-start">
-                <p class="h1 text-white text-start w-auto m-0 p-0  " style="font-size: 5rem;">TONGASOA . . .</p>
-                <h1 class= "text-start text-dark  m-0 p-0 bg-light">"Fa ny fahasoavan'Andriamanitra no naha toy izao ahy". I Kor 15 : 10a</h1>
-            </div>
-
+      <div class="carousel-caption">
+        <div class="text_b shadow-sm rounded-start">
+          <p class="h1 text-white text-start w-auto m-0 p-0" style="font-size: 5rem;">TONGASOA . . .</p>
+          <h1 class="text-start text-dark m-0 p-0 bg-light responsive-text">"Fa ny fahasoavan'Andriamanitra no naha toy izao ahy". I Kor 15 : 10a</h1>
         </div>
-        <a href="" target="_blank" rel="nofollow noopener noreferrer">
-            <div class="picsum-img-wrapper" >
-                <img class="img-fluid" [src]="img" alt=" My image {{ i + 1 }} description"/>
-            </div>
-        </a>
+      </div>
+      <a href="" target="_blank" rel="nofollow noopener noreferrer">
+        <div class="picsum-img-wrapper">
+          <img class="img-fluid" [src]="img" alt=" My image {{ i + 1 }} description"/>
+        </div>
+      </a>
     </ng-template>
-}
+  }
 </ngb-carousel>
+
+
 
 <hr />
 

@@ -1,0 +1,13 @@
+/* Ajouter ces règles dans votre feuille de style CSS */
+@media screen and (max-width: 768px) {
+    .responsive-text {
+      font-size: 1rem; /* Taille de police plus petite pour les écrans plus petits */
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .responsive-text {
+      font-size: 0.5rem; /* Taille de police encore plus petite pour les écrans très petits */
+    }
+  }
+  
