@@ -69,7 +69,7 @@ export class BiraoComponent {
 		{
 			"Nom":"Vaomieran'ny SERASERA",
 			"tache":"",
-			"image":"assets/komity/VAOMIERAN'NY SERASERA.JPG"
+			"image":"assets/komity/VAOMIERAN'NY SARASERA.JPG"
 		},
 		{
 			"Nom":"Vaomieran'ny SORATRA MASINA",
