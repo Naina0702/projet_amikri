@@ -14,7 +14,7 @@ RUN npm install
 FROM nginx:latest
 
 # Copier les fichiers construits de l'étape précédente dans le répertoire de travail de Nginx
-COPY --from=build /app/dist/frontend /usr/share/nginx/html/
+COPY --from=build /app/dist/frontend/browser/ /usr/share/nginx/html/
 
 # Exposer le port 80 pour accéder à l'application Angular
 EXPOSE 8081

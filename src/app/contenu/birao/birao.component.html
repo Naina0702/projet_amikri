@@ -66,25 +66,16 @@
         <p class="text-center">Ireo komity mandrindra ny raharaha ato amin'ny Antsan'ny MIno an'I KRIsty FLM SOANATAO - Ihosy</p>
     </div>
 </div>
+<h1 class="fs-1 text-center border-bottom">IREO VAOMIERA</h1>
 
-<div class="row shadow-sm">
-    <h1 class="fs-1 text-center border-bottom">IREO VAOMIERA</h1>
+<div *ngFor="let element of vaomiera" class="row shadow-sm my-3">
 
     <div class="col-md-6 m-auto">
-        <p class="fs-3 p-auto text-center">Vaomieran'ny hira</p>
+        <p class="fs-3 p-auto text-center">{{element.Nom}}</p>
     </div>
     <div class="col-md-6">
-        <img src="../../../assets/komity/VAOMIERAN'NY HIRA.JPG" class="img-fluid" alt="">
+        <img src="{{element.image}}" class="img-fluid" alt="">
     </div>
 
 </div>
 
-<div class="row">
-    <div class="col-md-9 m-auto">
-
-    </div>
-    <div class="col-md-3">
-        
-    </div>
-
-</div>

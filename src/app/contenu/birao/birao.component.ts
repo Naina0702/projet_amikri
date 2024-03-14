@@ -55,6 +55,34 @@ export class BiraoComponent {
 		},
 	]
 
+	vaomiera = [
+		{
+			"Nom":"Vaomieran'ny HIRA",
+			"tache":"",
+			"image":"assets/komity/VAOMIERAN'NY HIRA.JPG"
+		},
+		{
+			"Nom":"Vaomieran'ny FITAOVANA",
+			"tache":"",
+			"image":"assets/komity/VAOMIERAN'NY FITAOVANA.JPG"
+		},
+		{
+			"Nom":"Vaomieran'ny SERASERA",
+			"tache":"",
+			"image":"assets/komity/VAOMIERAN'NY SERASERA.JPG"
+		},
+		{
+			"Nom":"Vaomieran'ny SORATRA MASINA",
+			"tache":"",
+			"image":"assets/komity/VAOMIERAN'NY SORATRA MASINA.JPG"
+		},
+		{
+			"Nom":"Vaomieran'ny VOLA",
+			"tache":"",
+			"image":"assets/komity/VAOMIERAN'NY VOLA.JPG"
+		}
+	]
+
 	paused = false;
 	unpauseOnArrow = false;
 	pauseOnIndicator = false;
