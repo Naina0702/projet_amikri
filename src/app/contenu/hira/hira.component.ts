@@ -34,7 +34,7 @@ export class HiraComponent implements OnInit{
       "titre":"Fahasoavanao",
       "rythme":"",
       "image":"Album_1/fahasoavanao.png",
-      "Lien_youtube":""
+      "Lien_youtube":"https://www.youtube.com/watch?v=GkD_k3e4Rug"
     },
     {
       "titre":"Faneva AMIKRI",
@@ -46,13 +46,13 @@ export class HiraComponent implements OnInit{
       "titre":"Fantantrao",
       "rythme":"slow ballad",
       "image":"Album_1/fantatrao.png",
-      "Lien_youtube":""
+      "Lien_youtube":"https://www.youtube.com/watch?v=UnusWetNNVg"
     },
     {
       "titre":"Jesosy hiady ho anao",
       "rythme":"Classique",
       "image":"Album_1/jesosy_hiady.png",
-      "Lien_youtube":""
+      "Lien_youtube":"https://www.youtube.com/watch?v=j5zLyRHsK0k"
     },
     {
       "titre":"Lehibe ny fitiavany",
