@@ -23,7 +23,7 @@ export class BiraoComponent {
 		{
 			"Nom":"HELINIRINA Soamanarivo",
 			"Poste":"Vice-Présidente",
-			"IMG":"bureau/VP.JPG"
+			"IMG":"bureau/432348085_443566971357448_1083196586681801592_n.jpg"
 		},
 		{
 			"Nom":"MEME Florentine",
