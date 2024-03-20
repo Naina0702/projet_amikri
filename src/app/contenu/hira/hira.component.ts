@@ -1,10 +1,12 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit, TemplateRef, VERSION } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
 import { Subject, takeUntil } from 'rxjs';
 import { NgFor,NgIf } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-hira',
   standalone: true,
@@ -14,6 +16,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HiraComponent implements OnInit{
   videos:any 
+  data_:any
   album_2:any
   album_1:any
   album_video:any
@@ -22,7 +25,8 @@ export class HiraComponent implements OnInit{
       "titre":"Aoreno Mafy",
       "rythme":"karitaky",
       "image":"Album_1/aoreno.png",
-      "Lien_youtube":"https://www.youtube.com/watch?v=vxOnS2MFbpQ"
+      "Lien_youtube":"https://www.youtube.com/watch?v=vxOnS2MFbpQ",
+      "content":"content_aoreno"
     },
     {
       "titre":"Ety ny vavahady",
@@ -143,11 +147,18 @@ export class HiraComponent implements OnInit{
     },
   ]
   private unsubscribe$ = new Subject<void>();
+content!: TemplateRef<any>;
   constructor(private spinner_: NgxSpinnerService, 
     private service_: ServiceService,
-    private route:ActivatedRoute) { }
+    private route:ActivatedRoute,
+    private modalService:NgbModal,
+    private sanitizer: DomSanitizer) { }
 
 
+    transform(url: string): SafeResourceUrl {
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+  
 
   ngOnInit() {
     this.route.queryParams.subscribe((params)=>{
@@ -172,6 +183,12 @@ export class HiraComponent implements OnInit{
         console.log(data)
       });
   }
+
+  openXl(content: TemplateRef<any>,data:any) {
+		this.modalService.open(content, { size: 'xl' });
+    this.data_=data;
+    console.log(content);
+	}
 
 
 
