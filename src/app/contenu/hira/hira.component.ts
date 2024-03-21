@@ -147,7 +147,8 @@ export class HiraComponent implements OnInit{
     },
   ]
   private unsubscribe$ = new Subject<void>();
-content!: TemplateRef<any>;
+  content_aoreno!: TemplateRef<any>;
+  content_fahasoavanao!: TemplateRef<any>; 
   constructor(private spinner_: NgxSpinnerService, 
     private service_: ServiceService,
     private route:ActivatedRoute,
@@ -184,10 +185,10 @@ content!: TemplateRef<any>;
       });
   }
 
-  openXl(content: TemplateRef<any>,data:any) {
+  openXl(content:any,data:any) {
+
 		this.modalService.open(content, { size: 'xl' });
-    this.data_=data;
-    console.log(content);
+
 	}
 
 

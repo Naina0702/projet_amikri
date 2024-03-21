@@ -24,7 +24,7 @@ background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.76372555
 
 <div class="container mt-3 shadow-sm">
     <div class="list-group">
-        <a (click)="openXl(content_aoreno,elemnt)" *ngFor="let elemnt of album_video" class="list-group-item list-group-item-action d-flex gap-3 py-3 " aria-current="true">
+        <a (click)="openXl('content_aoreno', elemnt)" *ngFor="let elemnt of album_video" class="list-group-item list-group-item-action d-flex gap-3 py-3 " aria-current="true">
           <img src="../../../assets/{{elemnt.image}}" loading="lazy" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
           <div class="d-flex gap-2 w-100 justify-content-between">
             <div>
@@ -63,4 +63,19 @@ background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.76372555
 <ng-template #content_aoreno let-modal>
         <div class="ratio ratio-16x9 my-3">
             <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+</ng-template>
+
+<ng-template #content_fahasoavanao let-modal>
+    <div class="ratio ratio-16x9 my-3">
+        <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+</ng-template>
+
+<ng-template #content_ let-modal>
+    <div class="ratio ratio-16x9 my-3">
+        <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+</ng-template>
+
+<ng-template #content_ let-modal>
+<div class="ratio ratio-16x9 my-3">
+    <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
 </ng-template>
