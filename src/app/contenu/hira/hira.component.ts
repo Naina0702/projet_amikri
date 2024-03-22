@@ -1,4 +1,4 @@
-import { Component, OnInit, TemplateRef, VERSION } from '@angular/core';
+import { Component, OnInit, TemplateRef, VERSION, ViewChild } from '@angular/core';
 import { ServiceService } from '../../service/service.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,67 +20,57 @@ export class HiraComponent implements OnInit{
   album_2:any
   album_1:any
   album_video:any
+
   album_v_1=[
     {
       "titre":"Aoreno Mafy",
       "rythme":"karitaky",
       "image":"Album_1/aoreno.png",
-      "Lien_youtube":"https://www.youtube.com/watch?v=vxOnS2MFbpQ",
-      "content":"content_aoreno"
     },
     {
       "titre":"Ety ny vavahady",
       "rythme":"Sud.Af",
       "image":"Album_1/ety_.png",
-      "Lien_youtube":""
     },
     {
       "titre":"Fahasoavanao",
       "rythme":"",
       "image":"Album_1/fahasoavanao.png",
-      "Lien_youtube":"https://www.youtube.com/watch?v=GkD_k3e4Rug"
     },
     {
       "titre":"Faneva AMIKRI",
       "rythme":"",
       "image":"Album_1/faneva.png",
-      "Lien_youtube":""
     },
     {
       "titre":"Fantantrao",
       "rythme":"slow ballad",
       "image":"Album_1/fantatrao.png",
-      "Lien_youtube":"https://www.youtube.com/watch?v=UnusWetNNVg"
     },
     {
       "titre":"Jesosy hiady ho anao",
       "rythme":"Classique",
       "image":"Album_1/jesosy_hiady.png",
-      "Lien_youtube":"https://www.youtube.com/watch?v=j5zLyRHsK0k"
     },
     {
       "titre":"Lehibe ny fitiavany",
       "rythme":"Country",
       "image":"Album_1/lehibe_ny fitiavany.png",
-      "Lien_youtube":""
     },    
     {
       "titre":"Mifona",
       "rythme":"Slow",
       "image":"Album_1/mifona.png",
-      "Lien_youtube":""
     },
     {
       "titre":"Ny Aminao",
       "rythme":"Afro.beat",
       "image":"Album_1/ny aminao.png",
-      "Lien_youtube":""
     },
     {
       "titre":"Rongatry",
       "rythme":"Batrelaky",
       "image":"Album_1/rongatry.png",
-      "Lien_youtube":""
     },
   ]
 
@@ -146,16 +136,13 @@ export class HiraComponent implements OnInit{
       "Lien_youtube":""
     },
   ]
-  private unsubscribe$ = new Subject<void>();
-  content_aoreno!: TemplateRef<any>;
-  content_fahasoavanao!: TemplateRef<any>; 
   constructor(private spinner_: NgxSpinnerService, 
     private service_: ServiceService,
     private route:ActivatedRoute,
     private modalService:NgbModal,
     private sanitizer: DomSanitizer) { }
 
-
+    
     transform(url: string): SafeResourceUrl {
       return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
@@ -185,15 +172,64 @@ export class HiraComponent implements OnInit{
       });
   }
 
-  openXl(content:any,data:any) {
+  //Album vol 1
+  @ViewChild('content_aoreno') contentAoreno: any;
+  @ViewChild('content_faneva') content_faneva: any;
+  @ViewChild('content_ety') content_ety: any;
+  @ViewChild('content_fahasoavanao') content_fahasoavanao: any;
+  @ViewChild('content_jesosy') content_jesosy: any;
+  @ViewChild('content_lehibe') content_lehibe: any;
+  @ViewChild('content_mifona') content_mifona: any;
+  @ViewChild('content_ny_aminao') content_ny_aminao: any;
+  @ViewChild('content_rongatry') content_rongatry: any;
+  @ViewChild('content_fantatrao') content_fantatrao: any;
 
-		this.modalService.open(content, { size: 'xl' });
+  openXl(data:any) {
+
+    switch(data.titre){
+      case 'Aoreno Mafy':
+        this.modalService.open(this.contentAoreno, { size: 'xl' });
+        break;
+
+      case 'Ety ny vavahady':
+        this.modalService.open(this.content_ety, { size: 'xl' });
+        break;
+
+      case 'Fahasoavanao':
+        this.modalService.open(this.content_fahasoavanao, { size: 'xl' });
+        break;
+        
+      case 'Faneva AMIKRI':
+        this.modalService.open(this.content_faneva, { size: 'xl' });
+        break;
+        
+      case 'Fantatrao':
+        this.modalService.open(this.content_fantatrao, { size: 'xl' });
+        break;  
+
+      case "Jesosy hiady ho anao":
+        this.modalService.open(this.content_jesosy, { size: 'xl' });
+        break;
+        
+      case 'Lehibe ny fitiavany':
+        this.modalService.open(this.content_lehibe, { size: 'xl' });
+        break;
+        
+      case 'Mifona':
+        this.modalService.open(this.content_mifona, { size: 'xl' });
+        break;          
+
+      case "Ny Aminao":
+        this.modalService.open(this.content_ny_aminao, { size: 'xl' });
+        break;
+        
+      case 'Rongatry':
+        this.modalService.open(this.content_rongatry, { size: 'xl' });
+        break;  
+      }
+
 
 	}
 
-
-
   
-
-
 }

@@ -1,41 +1,82 @@
-<div class="row shadow vh-50" *ngIf="album_1" style=" 
-background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.6978992280505952) 15%, rgba(0,212,255,1) 100%); ">
-    <div class="col-md-3 p-3">
-        <img *ngIf="album_1" src="../../../assets/photo_album/IMG_E5023.JPG" class="img-fluid shadow vh-50">
-
-    </div>
-    <div class="col-md-9 m-auto">
-        <h1  class="fs-1 text-start text-light border-bottom border-light border-2">"Lehibe ny fitiavany" </h1>
-    </div>
+<div
+  class="row shadow vh-50"
+  *ngIf="album_1"
+  style="
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 0.6978992280505952) 15%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  "
+>
+  <div class="col-md-3 p-3">
+    <img
+      *ngIf="album_1"
+      src="../../../assets/photo_album/IMG_E5023.JPG"
+      class="img-fluid shadow vh-50"
+    />
+  </div>
+  <div class="col-md-9 m-auto">
+    <h1 class="fs-1 text-start text-light border-bottom border-light border-2">
+      "Lehibe ny fitiavany"
+    </h1>
+  </div>
 </div>
 
-<div class="row shadow vh-50" *ngIf="album_2" style=" 
- background: rgb(247,85,85);
-background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.7637255585828081) 53%, rgba(255,255,255,1) 100%);   ">
-    <div class="col-md-3 p-3">
-        <img  src="../../../assets/photo_album/IMG_E5024.JPG" class="img-fluid shadow vh-50" loading="lazy">
-
-    </div>
-    <div class="col-md-9 m-auto">
-        <h1 class="fs-1 text-start text-light border-bottom border-light border-2">"Mamafaza voa tsara"</h1>
-    </div>
+<div
+  class="row shadow vh-50"
+  *ngIf="album_2"
+  style="
+    background: rgb(247, 85, 85);
+    background: linear-gradient(
+      90deg,
+      rgba(247, 85, 85, 1) 0%,
+      rgba(179, 0, 0, 0.7637255585828081) 53%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  "
+>
+  <div class="col-md-3 p-3">
+    <img
+      src="../../../assets/photo_album/IMG_E5024.JPG"
+      class="img-fluid shadow vh-50"
+      loading="lazy"
+    />
+  </div>
+  <div class="col-md-9 m-auto">
+    <h1 class="fs-1 text-start text-light border-bottom border-light border-2">
+      "Mamafaza voa tsara"
+    </h1>
+  </div>
 </div>
 
 <div class="container mt-3 shadow-sm">
-    <div class="list-group">
-        <a (click)="openXl('content_aoreno', elemnt)" *ngFor="let elemnt of album_video" class="list-group-item list-group-item-action d-flex gap-3 py-3 " aria-current="true">
-          <img src="../../../assets/{{elemnt.image}}" loading="lazy" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
-          <div class="d-flex gap-2 w-100 justify-content-between">
-            <div>
-              <h5 class="mb-0">Antsan'ny MIno an'I KRIsty</h5>
-              <p class="mb-0 opacity-75">{{elemnt.titre}}</p>
-            </div>
-            <small class="opacity-50 text-nowrap">{{elemnt.rythme}}</small>
-          </div>
-        </a>
+  <div class="list-group">
+    <a
+      (click)="openXl(elemnt)"
+      *ngFor="let elemnt of album_video"
+      class="list-group-item list-group-item-action d-flex gap-3 py-3"
+      aria-current="true"
+    >
+      <img
+        src="../../../assets/{{ elemnt.image }}"
+        loading="lazy"
+        alt="twbs"
+        width="32"
+        height="32"
+        class="rounded-circle flex-shrink-0"
+      />
+      <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+          <h5 class="mb-0">Antsan'ny MIno an'I KRIsty</h5>
+          <p class="mb-0 opacity-75">{{ elemnt.titre }}</p>
+        </div>
+        <small class="opacity-50 text-nowrap">{{ elemnt.rythme }}</small>
       </div>
-
+    </a>
+  </div>
 </div>
 <!--
 <div class="container mt-3">
@@ -60,22 +101,106 @@ background: linear-gradient(90deg, rgba(247,85,85,1) 0%, rgba(179,0,0,0.76372555
 
 <button class="btn btn-outline-primary mb-2 me-2" (click)="openXl(content)">Extra large modal</button>
 -->
+
 <ng-template #content_aoreno let-modal>
-        <div class="ratio ratio-16x9 my-3">
-            <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=FFnR0DWhZYmau5eX"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_faneva let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAntsanMinoanKristy%2Fvideos%2F1636841380421954%2F&show_text=false&width=560&t=0"
+      width="560"
+      height="314"
+      style="border: none; overflow: hidden"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowFullScreen="true"
+    ></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_ety let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
 </ng-template>
 
 <ng-template #content_fahasoavanao let-modal>
-    <div class="ratio ratio-16x9 my-3">
-        <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe src="https://www.youtube.com/embed/GkD_k3e4Rug?si=f08JYZ-cXBFs_n80" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 </ng-template>
 
-<ng-template #content_ let-modal>
-    <div class="ratio ratio-16x9 my-3">
-        <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+<ng-template #content_fantatrao let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe src="https://www.youtube.com/embed/UnusWetNNVg?si=djaGZ31wBHe6_Hyv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 </ng-template>
 
-<ng-template #content_ let-modal>
-<div class="ratio ratio-16x9 my-3">
-    <iframe src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          </div>
+<ng-template #content_jesosy let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe src="https://www.youtube.com/embed/j5zLyRHsK0k?si=EuDczL-MlC87qMUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_lehibe let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_mifona let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.youtube.com/embed/vxOnS2MFbpQ?si=aoNKT9_IzuK22Bll"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_ny_aminao let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe
+      src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FAntsanMinoanKristy%2Fvideos%2F1636841380421954%2F&show_text=false&width=560&t=0"
+      style="border: none; overflow: hidden"
+      scrolling="no"
+      frameborder="0"
+      allowfullscreen="true"
+      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowFullScreen="true"
+    ></iframe>
+  </div>
+</ng-template>
+
+<ng-template #content_rongatry let-modal>
+  <div class="ratio ratio-16x9 my-3">
+    <iframe src="https://www.youtube.com/embed/TVc5t_UJ5Qg?si=By4YcuJXZzXnEccc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 </ng-template>
